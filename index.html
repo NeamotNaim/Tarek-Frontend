@@ -241,20 +241,25 @@
 
 <div class="navbar">
   <h2>🚀 TarekPix</h2>
-  <div class="toggle" onclick="toggleMode()">🌗</div>
+  <div style="display: flex; gap: 15px; align-items: center;">
+    <div id="nav-login-btn" onclick="showLogin()" style="cursor: pointer; background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 5px;">Login</div>
+    <div id="nav-logout-btn" onclick="logout()" style="cursor: pointer; background: #ef4444; padding: 5px 15px; border-radius: 5px; display: none;">Logout</div>
+    <div class="toggle" onclick="toggleMode()">🌗</div>
+  </div>
 </div>
 
 <div class="hero">
   <h1>Modern Image Platform</h1>
 </div>
 
-<div class="login-box">
-  <input placeholder="Email">
-  <input placeholder="Password" type="password">
-  <button>Login</button>
+<div class="login-box" id="login-box" style="display: none;">
+  <input id="login-email" placeholder="Email">
+  <input id="login-password" placeholder="Password" type="password">
+  <button onclick="login()">Login</button>
+  <button onclick="showHome()" style="background: rgba(255,255,255,0.1); margin-top: 10px;">Cancel</button>
 </div>
 
-<div class="upload-box">
+<div class="upload-box" id="upload-box" style="display: none;">
   <input id="title" placeholder="Title">
   <input id="category" placeholder="Category">
   <input type="file" id="image">
