@@ -2,7 +2,7 @@
 // For production, change the second URL to your Azure backend App Service URL
 const API = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
   ? "http://localhost:3000/api/images"
-  : "https://tarekpix-backend-api.azurewebsites.net/api/images";
+  : "https://tarekpix-backend-api-c3egh3hbbrghc2dp.polandcentral-01.azurewebsites.net/api/images";
 
 let likes = {};
 
